@@ -1,0 +1,132 @@
+{
+  "provenance": "live agy 1.5.3 on Linux; sanitized",
+  "capturedAt": "2026-11-12T03:54:06.177843+07:00",
+  "profile": "child-env-isolation-attempt",
+  "modelPromptSent": false,
+  "restrictedAgentRequested": false,
+  "activeCancelRequested": false,
+  "toolProbeRequested": false,
+  "absoluteGeminiDirRequested": true,
+  "retentionProbeRequested": false,
+  "canaryProbeRequested": false,
+  "canariesOutsideProfile": false,
+  "twoTurnUsageProbe": false,
+  "permissionProbeRequested": false,
+  "canaryMarkers": [],
+  "markerCreated": false,
+  "outcome": "session_new_error",
+  "records": [
+    {
+      "direction": "client",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "initialize",
+        "params": {
+          "protocolVersion": 1,
+          "clientCapabilities": {},
+          "clientInfo": {
+            "name": "litellm-antigravity-rpc",
+            "version": "0.1.0.dev0"
+          }
+        }
+      }
+    },
+    {
+      "direction": "server",
+      "message": {
+        "jsonrpc": "2.0",
+        "result": {
+          "protocolVersion": 1,
+          "agentCapabilities": {
+            "loadSession": true,
+            "load_session": true,
+            "promptCapabilities": {
+              "image": true,
+              "audio": false,
+              "embeddedContext": true
+            },
+            "sessionCapabilities": {
+              "resume": {},
+              "close": {},
+              "load": {},
+              "list": {},
+              "additionalDirectories": {}
+            },
+            "session_capabilities": {
+              "resume": {},
+              "close": {},
+              "load": {},
+              "list": {},
+              "additionalDirectories": {}
+            },
+            "auth": {
+              "logout": {}
+            },
+            "_meta": {
+              "keysOnly": [
+                "antigravity"
+              ]
+            }
+          },
+          "agentInfo": {
+            "name": "Antigravity ACP Server",
+            "version": "1.5.3"
+          },
+          "authMethods": [
+            {
+              "id": "oauth-personal",
+              "name": "Log in with Google",
+              "description": "Log in with your Google account"
+            },
+            {
+              "id": "oauth-business",
+              "name": "Log in with Gemini Enterprise",
+              "description": "Log in with your Gemini Enterprise account"
+            },
+            {
+              "id": "gemini-api-key",
+              "name": "Gemini API key",
+              "description": "Use an API key with Gemini Developer API"
+            },
+            {
+              "id": "agent-platform",
+              "name": "Gemini Enterprise Agent Platform",
+              "description": "Use Gemini Enterprise Agent Platform (formerly Vertex AI) with Application Default Credentials"
+            }
+          ]
+        },
+        "id": 1
+      }
+    },
+    {
+      "direction": "client",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "session/new",
+        "params": {
+          "cwd": "<cwd>",
+          "mcpServers": []
+        }
+      }
+    },
+    {
+      "direction": "server",
+      "message": {
+        "jsonrpc": "2.0",
+        "error": {
+          "code": -32000,
+          "message": "Authentication required"
+        },
+        "id": 2
+      }
+    }
+  ],
+  "limits": [
+    "Only an active cancel probe tests turn cancellation",
+    "Model listing does not prove access to every listed model",
+    "OS keyring is not isolated by child environment changes",
+    "No production process-tree cleanup stress test"
+  ]
+}

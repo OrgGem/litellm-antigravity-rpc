@@ -1,0 +1,24 @@
+{
+  "provenance": "synthetic documented error; NOT reproduced on this logged-in Windows account",
+  "source": "https://antigravity.google/docs/ide/extensions/acp/",
+  "captureDate": "2026-11-12",
+  "records": [
+    {
+      "direction": "client",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "session/new",
+        "params": {"cwd": "<cwd>", "mcpServers": []}
+      }
+    },
+    {
+      "direction": "server",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "error": {"code": -32000, "message": "Authentication required"}
+      }
+    }
+  ]
+}

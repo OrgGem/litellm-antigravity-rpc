@@ -1,0 +1,36 @@
+{
+  "provenance": "synthetic ACP v1 example; NOT observed from agy",
+  "source": "https://agentclientprotocol.com/protocol/v1/tool-calls",
+  "captureDate": "2026-11-12",
+  "records": [
+    {
+      "direction": "server",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": "permission-1",
+        "method": "session/request_permission",
+        "params": {
+          "sessionId": "<sessionId>",
+          "toolCall": {
+            "toolCallId": "tool-1",
+            "title": "Synthetic terminal operation",
+            "kind": "execute",
+            "status": "pending"
+          },
+          "options": [
+            {"optionId": "reject", "name": "Reject", "kind": "reject_once"},
+            {"optionId": "allow", "name": "Allow", "kind": "allow_once"}
+          ]
+        }
+      }
+    },
+    {
+      "direction": "client",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": "permission-1",
+        "result": {"outcome": {"outcome": "selected", "optionId": "reject"}}
+      }
+    }
+  ]
+}
